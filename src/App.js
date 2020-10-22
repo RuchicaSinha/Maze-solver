@@ -16,7 +16,7 @@ async function recursiveIteration(x, y, maze, dispatch) {
   await dispatch(setCellColor({
     x,
     y,
-    color: "#FF0000"
+    color: "rgba(250,125,125,255)"
   }));
   for (const dir of dirs) {
     const nx = x + dx[dir];
