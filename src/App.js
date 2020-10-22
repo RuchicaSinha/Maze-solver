@@ -62,7 +62,6 @@ function App() {
         <h1>Maze <span id="solver">Solver</span></h1>
 
         <div class="container">
-          <form>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
@@ -104,7 +103,6 @@ function App() {
             </div>
           </div>
           
-        </form>
         </div>
 
       
