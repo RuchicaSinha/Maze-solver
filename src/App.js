@@ -12,17 +12,22 @@ import { SolverCanvas } from './features/solver/solver';
 
 async function recursiveIteration(x, y, maze, dispatch) {
   const dirs = ["N", "S", "E", "W"];
-  shuffle(dirs);
+  shuffle(dirs); //W
   await dispatch(setCellColor({
     x,
     y,
-    color: "rgba(250,125,125,255)"
+    color: "rgb(116, 3, 182)"
   }));
-  for (const dir of dirs) {
-    const nx = x + dx[dir];
+  // xy 00, shuffle EWSN
+  // xy 10, shuffle NEWS
+  // xy 20
+
+  //xy 01
+  for (const dir of dirs) { //dir E, starting 00
+    const nx = x + dx[dir]; 
     const ny = y + dy[dir];
     if ((nx >= 0 && nx < maze.width) && (ny >= 0 && ny < maze.height) && (maze.maze[ny][nx].walls === 0)) {
-      maze.maze[y][x].walls |= directions[dir];
+      maze.maze[y][x].walls |= directions[dir]; //wall initally 0000, 0100
       maze.maze[ny][nx].walls |= opposite[dir];
       await dispatch(carveWall({
         x,
@@ -54,33 +59,39 @@ function App() {
   const maze = useSelector(selectMaze);
   return (
     <div className="App">
-      <div>
-        <label for="number">Enter Maze Size</label>
-        <input value={size} onInput={e => setSize(e.target.value)} id="number" type="number"></input>
-        <button onClick={() => dispatch(newMaze({ size }))}>Initialize!</button>
-        <br></br>
-        <br></br>
-
-        <label for="generationAlgo">Select Maze generation algorithm</label>
-        <select id="generationAlgo">
-          <option value="recursive">Recursive Backtracking</option>
-          <option value="kruskal">Kruskal Algorithm</option>
-        </select>
-        <button onClick={() => { recursiveBacktrack(maze, dispatch) }}>Generate Maze!</button>
-
-        <br></br>
-        <br></br>
-
-        <label for="solvingAlgo">Select Maze solving algorithm</label>
-        <select id="solvingAlgo">
-          <option value="recursive">Recursive Backtracking</option>
-          <option value="kruskal">Kruskal Algorithm</option>
-        </select>
-        <button>Solve Maze!</button>
-
-        <br></br>
-        <br></br>
+      <div class="container">
+        <h1>Maze Solver</h1>
       </div>
+
+      <div>
+          <label for="number">Enter Maze Size</label>
+          <input value={size} onInput={e => setSize(e.target.value)} id="number" type="number"></input>
+          <button onClick={() => dispatch(newMaze({ size }))}>Initialize!</button>
+          <br></br>
+          <br></br>
+
+          <label for="generationAlgo">Select Maze generation algorithm</label>
+          <select id="generationAlgo">
+            <option value="recursive">Recursive Backtracking</option>
+            <option value="kruskal">Kruskal Algorithm</option>
+          </select>
+          <button onClick={() => { recursiveBacktrack(maze, dispatch) }}>Generate Maze!</button>
+
+          <br></br>
+          <br></br>
+
+          <label for="solvingAlgo">Select Maze solving algorithm</label>
+          <select id="solvingAlgo">
+            <option value="recursive">Recursive Backtracking</option>
+            <option value="kruskal">Kruskal Algorithm</option>
+          </select>
+          <button>Solve Maze!</button>
+
+          <br></br>
+          <br></br>
+        </div>
+      
+
       <div className="canvasContainer">
         <MazeCanvas size={500} />
         <SolverCanvas size={500} />

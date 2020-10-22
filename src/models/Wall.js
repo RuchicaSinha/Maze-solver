@@ -1,6 +1,6 @@
 export const directions = {
-    N: 1,
-    S: 2,
+    N: 1, //rightmost-bit
+    S: 2, 
     E: 4,
     W: 8,
 }

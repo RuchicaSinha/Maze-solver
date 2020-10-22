@@ -9,11 +9,13 @@ function drawLine(ctx, p1, p2) {
     const prevWidth = ctx.lineWidth;
     ctx.lineCap = "round";
     ctx.lineWidth = 3;
+    ctx.strokeStyle = "#908978";
     ctx.moveTo(p1[0], p1[1]);
     ctx.lineTo(p2[0], p2[1]);
     ctx.stroke();
     ctx.lineCap = prevCap;
     ctx.lineWidth = prevWidth;
+    //lineStroke - 
 }
 
 function fillRect(ctx, p, dim, color) {
@@ -33,11 +35,11 @@ function drawCellWalls(ctx, walls, dim, x, y) {
     const tr = [x * dim + dim, y * dim];
     const bl = [x * dim, y * dim + dim];
     const br = [x * dim + dim, y * dim + dim];
-    if ((walls & directions.N) === 0) {
+    if ((walls & directions.N) === 0) { //0110 and 0001
         drawLine(ctx, tl, tr);
     }
 
-    if ((walls & directions.E) === 0) {
+    if ((walls & directions.E) === 0) { //0110 and 0100
         drawLine(ctx, tr, br);
     }
 
