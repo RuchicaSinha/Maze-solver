@@ -12,8 +12,8 @@ export function SolverCanvas(props) {
     const maze = useSelector(selectMaze);
     const moves = useSelector(selectMoves);
 
-    const start = [0,maze.height-1]
-    const end = [maze.width-1, 0]
+    const start = useSelector((state) => state.solver.start);
+    const end = useSelector((state) => state.solver.end);
 
     useEffect(() => {
         const dim = size/maze.width;

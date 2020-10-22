@@ -12,6 +12,34 @@ export const opposite = {
     W: directions.E
 }
 
+export const turnRight = {
+    N: directions.E,
+    E: directions.S,
+    S: directions.W,
+    W: directions.N,
+}
+
+export const rightDir = {
+    N: "E",
+    E: "S",
+    S: "W",
+    W: "N",
+}
+
+export const turnLeft = {
+    N: directions.W,
+    W: directions.S,
+    S: directions.E,
+    E: directions.N,
+}
+
+export const leftDir = {
+    N: "W",
+    W: "S",
+    S: "E",
+    E: "N",
+}
+
 export const dx = {
     N: 0,
     S: 0,
