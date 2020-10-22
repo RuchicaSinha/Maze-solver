@@ -5,9 +5,15 @@ import { selectMaze } from "./mazeSlice";
 
 function drawLine(ctx, p1, p2) {
     ctx.beginPath();
+    const prevCap = ctx.lineCap;
+    const prevWidth = ctx.lineWidth;
+    ctx.lineCap = "round";
+    ctx.lineWidth = 3;
     ctx.moveTo(p1[0], p1[1]);
     ctx.lineTo(p2[0], p2[1]);
     ctx.stroke();
+    ctx.lineCap = prevCap;
+    ctx.lineWidth = prevWidth;
 }
 
 function fillRect(ctx, p, dim, color) {
