@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  float: center;
 }
 
 .App-logo {
@@ -53,18 +54,24 @@
 
 body {
   background-color: #121212;
-  color: white;
+  color: black;
   font-family: "Montserrat", "Avenir";
 }
 
 h1 {
   text-align: center;
 	line-height: 1.1;
-	font-weight: normal;
+  font-weight: 900;
+  letter-spacing: 10px;
 	color: white;
 	background: rgb(88, 6, 136);
 	margin: 0;
 	text-transform: uppercase;
   padding: 20px 0;
   margin-bottom: 40px;
+}
+
+.container {
+  font-weight: 200;
+  color: rgb(138, 133, 133);
 }

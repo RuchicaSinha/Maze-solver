@@ -59,43 +59,55 @@ function App() {
   const maze = useSelector(selectMaze);
   return (
     <div className="App">
-      <div class="container">
-        <h1>Maze Solver</h1>
-      </div>
+        <h1>Maze <span id="solver">Solver</span></h1>
 
-      <div>
-          <label for="number">Enter Maze Size</label>
-          <input value={size} onInput={e => setSize(e.target.value)} id="number" type="number"></input>
-          <button onClick={() => dispatch(newMaze({ size }))}>Initialize!</button>
-          <br></br>
-          <br></br>
+        <div class="container">
+          <form>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="number">Enter Maze Size</label>
+                <input value={size} onInput={e => setSize(e.target.value)} id="number" type="number"></input>
+                <button class="btn btn-primary" onClick={() => dispatch(newMaze({ size }))}>Initialize!</button>
+              </div>
+              <br></br>
 
-          <label for="generationAlgo">Select Maze generation algorithm</label>
-          <select id="generationAlgo">
-            <option value="recursive">Recursive Backtracking</option>
-            <option value="kruskal">Kruskal Algorithm</option>
-          </select>
-          <button onClick={() => { recursiveBacktrack(maze, dispatch) }}>Generate Maze!</button>
+              <div class="form-group">
+                <label for="generationAlgo">Select Maze generation algorithm</label>
+                <select id="generationAlgo">
+                  <option value="recursive">Recursive Backtracking</option>
+                  <option value="kruskal">Kruskal Algorithm</option>
+                </select>
+                <button class="btn btn-primary" onClick={() => { recursiveBacktrack(maze, dispatch) }}>Generate Maze!</button>
+              </div>
+              <br></br>
 
-          <br></br>
-          <br></br>
+              <div class="form-group">
+                <label for="solvingAlgo">Select Maze solving algorithm</label>
+                <select id="solvingAlgo">
+                  <option value="recursive">Recursive Backtracking</option>
+                  <option value="kruskal">Kruskal Algorithm</option>
+                </select>
+                <button class="btn btn-primary">Solve Maze!</button>
+              </div>
+            </div>
 
-          <label for="solvingAlgo">Select Maze solving algorithm</label>
-          <select id="solvingAlgo">
-            <option value="recursive">Recursive Backtracking</option>
-            <option value="kruskal">Kruskal Algorithm</option>
-          </select>
-          <button>Solve Maze!</button>
+            <br></br>
+            <br></br>
 
-          <br></br>
-          <br></br>
+
+            <div className="col-md-6">
+              <div class="canvasContainer">
+                <MazeCanvas size={500} />
+                <SolverCanvas size={500} />
+              </div>
+            </div>
+          </div>
+          
+        </form>
         </div>
-      
 
-      <div className="canvasContainer">
-        <MazeCanvas size={500} />
-        <SolverCanvas size={500} />
-      </div>
+      
     </div>
   );
 }
