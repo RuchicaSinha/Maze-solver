@@ -16,7 +16,7 @@ async function recursiveIteration(x, y, maze, dispatch) {
   await dispatch(setCellColor({
     x,
     y,
-    color: "rgb(78, 5, 121)"
+    color: "rgba(78, 5, 121, 0.7)"
   }));
   // xy 00, shuffle EWSN
   // xy 10, shuffle NEWS
