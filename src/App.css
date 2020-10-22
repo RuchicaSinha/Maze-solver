@@ -64,7 +64,7 @@ h1 {
   font-weight: 900;
   letter-spacing: 10px;
 	color: white;
-	background: rgb(88, 6, 136);
+	background: rgb(63, 3, 97);
 	margin: 0;
 	text-transform: uppercase;
   padding: 20px 0;
@@ -73,5 +73,5 @@ h1 {
 
 .container {
   font-weight: 200;
-  color: rgb(138, 133, 133);
+  color: rgb(197, 197, 197);
 }

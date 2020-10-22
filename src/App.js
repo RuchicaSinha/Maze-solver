@@ -16,7 +16,7 @@ async function recursiveIteration(x, y, maze, dispatch) {
   await dispatch(setCellColor({
     x,
     y,
-    color: "rgb(116, 3, 182)"
+    color: "rgb(78, 5, 121)"
   }));
   // xy 00, shuffle EWSN
   // xy 10, shuffle NEWS
@@ -87,7 +87,7 @@ function App() {
                   <option value="recursive">Recursive Backtracking</option>
                   <option value="kruskal">Kruskal Algorithm</option>
                 </select>
-                <button class="btn btn-primary">Solve Maze!</button>
+                <button class="btn btn-success">Solve Maze!</button>
               </div>
             </div>
 

@@ -9,13 +9,12 @@ function drawLine(ctx, p1, p2) {
     const prevWidth = ctx.lineWidth;
     ctx.lineCap = "round";
     ctx.lineWidth = 3;
-    ctx.strokeStyle = "#908978";
+    ctx.strokeStyle = "#fafafa";
     ctx.moveTo(p1[0], p1[1]);
     ctx.lineTo(p2[0], p2[1]);
     ctx.stroke();
     ctx.lineCap = prevCap;
     ctx.lineWidth = prevWidth;
-    //lineStroke - 
 }
 
 function fillRect(ctx, p, dim, color) {
