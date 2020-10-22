@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Maze-solver/static/css/main.4ac5d91d.chunk.css",
-    "main.js": "/Maze-solver/static/js/main.becee752.chunk.js",
-    "main.js.map": "/Maze-solver/static/js/main.becee752.chunk.js.map",
+    "main.css": "/Maze-solver/static/css/main.0ee61116.chunk.css",
+    "main.js": "/Maze-solver/static/js/main.a0e12642.chunk.js",
+    "main.js.map": "/Maze-solver/static/js/main.a0e12642.chunk.js.map",
     "runtime-main.js": "/Maze-solver/static/js/runtime-main.526ff948.js",
     "runtime-main.js.map": "/Maze-solver/static/js/runtime-main.526ff948.js.map",
     "static/js/2.1edf7295.chunk.js": "/Maze-solver/static/js/2.1edf7295.chunk.js",
     "static/js/2.1edf7295.chunk.js.map": "/Maze-solver/static/js/2.1edf7295.chunk.js.map",
     "index.html": "/Maze-solver/index.html",
-    "precache-manifest.16a397c881688958bcfd94df95e92b62.js": "/Maze-solver/precache-manifest.16a397c881688958bcfd94df95e92b62.js",
+    "precache-manifest.35c761b4a517c7bc3d2fb789b7300df3.js": "/Maze-solver/precache-manifest.35c761b4a517c7bc3d2fb789b7300df3.js",
     "service-worker.js": "/Maze-solver/service-worker.js",
-    "static/css/main.4ac5d91d.chunk.css.map": "/Maze-solver/static/css/main.4ac5d91d.chunk.css.map",
+    "static/css/main.0ee61116.chunk.css.map": "/Maze-solver/static/css/main.0ee61116.chunk.css.map",
     "static/js/2.1edf7295.chunk.js.LICENSE.txt": "/Maze-solver/static/js/2.1edf7295.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.526ff948.js",
     "static/js/2.1edf7295.chunk.js",
-    "static/css/main.4ac5d91d.chunk.css",
-    "static/js/main.becee752.chunk.js"
+    "static/css/main.0ee61116.chunk.css",
+    "static/js/main.a0e12642.chunk.js"
   ]
 }
