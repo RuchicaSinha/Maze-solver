@@ -20,7 +20,6 @@ jobs:
     - name: npm install, lint
       run: |
         npm install
-        npm run lint:fix
         npm run build
       
     - name: Deploy to github.io
