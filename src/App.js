@@ -117,6 +117,7 @@ function App() {
               <select id="generationAlgo">
                 <option value="recursive">Recursive Backtracking</option>
                 <option value="kruskal">Kruskal Algorithm</option>
+                <option value="kruskal">Prim's Algorithm</option>
               </select>
               <button class="btn btn-primary" onClick={() => { recursiveBacktrack(maze, dispatch) }}>Generate Maze!</button>
             </div>
@@ -126,7 +127,7 @@ function App() {
               <label for="solvingAlgo">Select Maze solving algorithm</label>
               <select id="solvingAlgo">
                 <option value="recursive">Wall Follower Algorithm</option>
-                <option value="kruskal">Kruskal Algorithm</option>
+                <option value="kruskal">Depth First Search</option>
               </select>
               <button class="btn btn-success" onClick={() => {
                 wallFollower(maze, dispatch, start, end);
